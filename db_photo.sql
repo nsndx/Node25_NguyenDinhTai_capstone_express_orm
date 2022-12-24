@@ -27,7 +27,7 @@ CREATE TABLE `hinh_anh` (
   PRIMARY KEY (`hinh_id`),
   KEY `nguoi_dung_id` (`nguoi_dung_id`),
   CONSTRAINT `hinh_anh_ibfk_1` FOREIGN KEY (`nguoi_dung_id`) REFERENCES `nguoi_dung` (`nguoi_dung_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `luu_anh` (
   `nguoi_dung_id` int NOT NULL,
@@ -63,7 +63,8 @@ INSERT INTO `hinh_anh` (`hinh_id`, `ten_hinh`, `duong_dan`, `mo_ta`, `nguoi_dung
 INSERT INTO `hinh_anh` (`hinh_id`, `ten_hinh`, `duong_dan`, `mo_ta`, `nguoi_dung_id`) VALUES
 (3, 'hinh cde', 'https://picsum.photos/id/3/500/400.jpg', NULL, 2);
 INSERT INTO `hinh_anh` (`hinh_id`, `ten_hinh`, `duong_dan`, `mo_ta`, `nguoi_dung_id`) VALUES
-(4, 'hinh def', 'https://picsum.photos/id/4/500/400.jpg', NULL, 3);
+(4, 'hinh def', 'https://picsum.photos/id/4/500/400.jpg', NULL, 3),
+(5, 'hinh moi', '/public/images/1671885274975_test.jpg', 'hinh dep', 3);
 
 INSERT INTO `luu_anh` (`nguoi_dung_id`, `hinh_id`, `ngay_luu`) VALUES
 (1, 3, '2022-12-01');
